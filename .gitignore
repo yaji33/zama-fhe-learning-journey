@@ -148,4 +148,4 @@ compile-cache.json
 # Solc compiler builds
 solc-*
 
-compile-cache.json
+cache/compile-cache.json
