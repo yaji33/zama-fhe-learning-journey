@@ -10,13 +10,17 @@ import * as Contracts from "./index.js";
 
 declare module "@nomicfoundation/hardhat-ethers/types" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
-  getContractFactory(name: 'Counter', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Counter__factory>
+  getContractFactory(name: 'Variables', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Variables__factory>
+getContractFactory(name: 'Counter', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Counter__factory>
 
-  getContractAt(name: 'Counter', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Counter>
+  getContractAt(name: 'Variables', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Variables>
+getContractAt(name: 'Counter', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Counter>
 
-  deployContract(name: 'Counter', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
+  deployContract(name: 'Variables', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
+deployContract(name: 'Counter', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
 
-  deployContract(name: 'Counter', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
+  deployContract(name: 'Variables', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
+deployContract(name: 'Counter', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
 
     // default types
     getContractFactory(
