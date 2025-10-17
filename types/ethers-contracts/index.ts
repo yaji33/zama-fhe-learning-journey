@@ -6,6 +6,8 @@ export type { counterSol };
 import type * as basics from './basics/index.js';
 export type { basics };
 export * as factories from './factories/index.js';
+export type { Functions } from './basics/Functions.sol/Functions.js';
+export { Functions__factory } from './factories/basics/Functions.sol/Functions__factory.js';
 export type { Variables } from './basics/Variables.sol/Variables.js';
 export { Variables__factory } from './factories/basics/Variables.sol/Variables__factory.js';
 export type { Counter } from './Counter.sol/Counter.js';

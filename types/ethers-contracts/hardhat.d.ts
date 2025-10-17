@@ -10,16 +10,20 @@ import * as Contracts from "./index.js";
 
 declare module "@nomicfoundation/hardhat-ethers/types" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
-  getContractFactory(name: 'Variables', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Variables__factory>
+  getContractFactory(name: 'Functions', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Functions__factory>
+getContractFactory(name: 'Variables', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Variables__factory>
 getContractFactory(name: 'Counter', signerOrOptions?: ethers.Signer | FactoryOptions): Promise<Contracts.Counter__factory>
 
-  getContractAt(name: 'Variables', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Variables>
+  getContractAt(name: 'Functions', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Functions>
+getContractAt(name: 'Variables', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Variables>
 getContractAt(name: 'Counter', address: string | ethers.Addressable, signer?: ethers.Signer): Promise<Contracts.Counter>
 
-  deployContract(name: 'Variables', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
+  deployContract(name: 'Functions', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Functions>
+deployContract(name: 'Variables', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
 deployContract(name: 'Counter', signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
 
-  deployContract(name: 'Variables', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
+  deployContract(name: 'Functions', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Functions>
+deployContract(name: 'Variables', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Variables>
 deployContract(name: 'Counter', args: any[], signerOrOptions?: ethers.Signer | DeployContractOptions): Promise<Contracts.Counter>
 
     // default types
